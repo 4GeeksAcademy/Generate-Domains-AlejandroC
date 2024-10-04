@@ -43,13 +43,9 @@ for (let i = 0; i < pronoun.length; i++) {
       for (let l = 0; l < domain.length; l++) {
         let strDomainName = pronoun[i] + adj[j] + noun[k] + domain[l];
         if (noun[k].slice(-2) === domain[l].slice(1)) {
-          console.log(
-            strDomainName.replace(noun[k].slice(-2) + domain[l], domain[l])
-          );
+          console.log(strDomainName.replace(noun[k].slice(-2) + domain[l], domain[l]));
         } else if (noun[k].slice(-3) === domain[l].slice(1)) {
-          console.log(
-            strDomainName.replace(noun[k].slice(-3) + domain[l], domain[l])
-          );
+          console.log(strDomainName.replace(noun[k].slice(-3) + domain[l], domain[l]));
         } else {
           console.log(strDomainName);
         }
