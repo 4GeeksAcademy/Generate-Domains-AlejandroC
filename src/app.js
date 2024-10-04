@@ -9,12 +9,24 @@ window.onload = function() {
   //write your code here
   let pronoun = ["good", "rainbow"];
   let adj = ["of", "six"];
-  let noun = ["war", "siege"];
+  let noun = ["war", "repes"];
+  let domain = [".ar", ".es"];
 
   for (let i = 0; i < pronoun.length; i++) {
     for (let j = 0; j < adj.length; j++) {
       for (let k = 0; k < noun.length; k++) {
-        console.log(pronoun[i] + adj[j] + noun[k]);
+        for (let l = 0; l < domain.length; l++) {
+          if (noun[k].slice(-2) === domain[l].slice(1)) {
+            console.log(
+              (pronoun[i] + adj[j] + noun[k] + domain[l]).replace(
+                noun[k].slice(-2) + domain[l],
+                domain[l]
+              )
+            );
+          } else {
+            console.log(pronoun[i] + adj[j] + noun[k] + domain[l]);
+          }
+        }
       }
     }
   }
